@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: demo-app
+  cloud:
+    kubernetes:
+      config:
+        sources:
+          - name: pulsar-config
+          - name: kafka-config

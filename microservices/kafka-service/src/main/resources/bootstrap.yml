@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: demo-app
+  cloud:
+    kubernetes:
+      config:
+        sources:
+          - name: kafka-config

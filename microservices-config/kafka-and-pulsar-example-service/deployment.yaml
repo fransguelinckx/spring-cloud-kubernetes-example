@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kafka-pulsar-service
+  labels:
+    app: kafka-pulsar-service
+spec:
+  selector:
+    matchLabels:
+      app: kafka-pulsar-service
+  template:
+    metadata:
+      labels:
+        app: kafka-pulsar-service
+    spec:
+      containers:
+        - name: kafka-pulsar-service
+          image: spring-boot-kustomize:kafka-pulsar
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080

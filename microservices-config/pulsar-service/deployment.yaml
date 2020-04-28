@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pulsar-service
+  labels:
+    app: pulsar-service
+spec:
+  selector:
+    matchLabels:
+      app: pulsar-service
+  template:
+    metadata:
+      labels:
+        app: pulsar-service
+    spec:
+      containers:
+        - name: pulsar-service
+          image: spring-boot-kustomize:pulsar
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
