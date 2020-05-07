@@ -16,11 +16,15 @@ public class Controller {
     @Value("${everesst.kafka}")
     private String kafkaEnabled;
 
+    @Value("${everesst.other.kafka}")
+    private String otherKafkaProperty;
+
     @GetMapping("/config")
     public Map<String, String> config() {
         HashMap<String, String> config = new HashMap<>();
         config.put("pulsar", pulsarEnabled);
         config.put("kafka", kafkaEnabled);
+        config.put("other.kafka", otherKafkaProperty);
         return config;
     }
 }

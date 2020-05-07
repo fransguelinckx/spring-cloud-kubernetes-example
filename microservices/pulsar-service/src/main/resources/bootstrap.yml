@@ -6,3 +6,4 @@ spring:
       config:
         sources:
           - name: pulsar-config
+          - name: kafka-config

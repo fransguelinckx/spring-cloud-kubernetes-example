@@ -5,5 +5,5 @@ metadata:
 data:
   application.yaml: |-
     everesst:
-      kafka: false
+      kafka: ${everesst.other.kafka}
       pulsar: true

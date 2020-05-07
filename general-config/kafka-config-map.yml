@@ -5,5 +5,7 @@ metadata:
 data:
   application.yaml: |-
     everesst:
+      other:
+        kafka: hahaha
       kafka: true
       pulsar: false
